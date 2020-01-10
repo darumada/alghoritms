@@ -25,9 +25,9 @@ def linear_search(array, target):
     return None
 
 
-print (linear_search(arr, target1))  # 1
+print(linear_search(arr, target1))  # 1
 
-print (linear_search(arr, target2))  # None
+print(linear_search(arr, target2))  # None
 
 
 # Наилучший исход - O(1)

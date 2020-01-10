@@ -11,7 +11,7 @@
 
 def merge_sort(array):
     if len(array) > 1:
-        middle = len(array) / 2
+        middle = len(array) // 2
 
         left_array = array[:middle]
         right_array = array[middle:]
@@ -45,4 +45,4 @@ arr = [9, 20, 3, 1, 8, 10, 11, 5]
 
 merge_sort(arr)
 
-print arr
+print(arr)

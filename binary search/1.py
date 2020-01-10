@@ -19,7 +19,7 @@ def binary_search(array, left, right, target):
     if left > right:
         return None
 
-    middle = (right + left) / 2
+    middle = (right + left) // 2
 
     if array[middle] == target:
         return middle
@@ -29,5 +29,5 @@ def binary_search(array, left, right, target):
         return binary_search(array, middle + 1, right, target)
 
 
-print binary_search(arr, 0, len(arr) - 1, 4)  # 3
-print binary_search(arr, 0, len(arr) - 1, -2)  # None
+print(binary_search(arr, 0, len(arr) - 1, 4))  # 3
+print(binary_search(arr, 0, len(arr) - 1, -2))  # None

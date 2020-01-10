@@ -14,27 +14,25 @@ arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 
 def binary_search(array, target):
-  
-  left = 0
-  right = len(array) - 1
+    left = 0
+    right = len(array) - 1
 
-  while left <= right:
-    middle = (left + right) / 2
+    while left <= right:
+        middle = (left + right) / 2
 
-    if (arr[middle] == target):
-      return middle
-    
-    if (arr[middle] < target):
-      left = middle + 1
-      continue
-    
-    if (arr[middle] > target):
-      right = middle - 1
-      continue
+        if arr[middle] == target:
+            return middle
 
-  return None
-    
+        if arr[middle] < target:
+            left = middle + 1
+            continue
+
+        if arr[middle] > target:
+            right = middle - 1
+            continue
+
+    return None
 
 
-print binary_search(arr, 4)  # 3
-print binary_search(arr, -2)  # None
+print(binary_search(arr, 4))  # 3
+print(binary_search(arr, -2))  # None

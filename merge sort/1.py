@@ -13,7 +13,7 @@
 
 def merge_sort(array, left, right):
     if left < right:
-        middle = (left + right) / 2
+        middle = (left + right) // 2
 
         merge_sort(array, left, middle)
         merge_sort(array, middle + 1, right)
@@ -61,4 +61,4 @@ arr = [9, 20, 3, 1, 8, 10, 11, 5]
 
 merge_sort(arr, 0, len(arr) - 1)
 
-print arr
+print(arr)

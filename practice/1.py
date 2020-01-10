@@ -41,4 +41,4 @@ my_arr = [10, 2, 3, 5]
 
 selection_sort(my_arr)
 
-print my_arr
+print(my_arr)
