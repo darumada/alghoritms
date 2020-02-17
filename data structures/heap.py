@@ -1,6 +1,8 @@
 class MinHeap:
-    def __init__(self):
-        self._data = []
+    def __init__(self, contents=[]):
+        self._data = [item for item in contents]
+        if len(self._data) > 1:
+            self._heapify()
 
     def __str__(self):
         return self._data.__str__()
@@ -10,6 +12,12 @@ class MinHeap:
 
     def __len__(self):
         return len(self._data)
+
+    def _heapify(self):
+        start = self._parent(len(self._data) - 1)
+
+        for i in range(start, -1, -1):
+            self._downheap(i)
 
     def _left(self, i):
         return 2 * i + 1
@@ -50,7 +58,6 @@ class MinHeap:
                 self._swap(i, smallest)
                 self._downheap(smallest)
 
-
     def is_empty(self):
         return len(self._data) == 0
 
@@ -70,19 +77,21 @@ class MinHeap:
 
 
 if __name__ == '__main__':
-    M = MinHeap()
+    # M = MinHeap()
+    M = MinHeap([10, 5, 13, 8, 3, 1, 20])
 
-    M.push(10)
-    M.push(5)
-    M.push(13)
-    M.push(8)
-    M.push(3)
-    M.push(1)
-    M.push(20)
+    # M.push(10)
+    # M.push(5)
+    # M.push(13)
+    # M.push(8)
+    # M.push(3)
+    # M.push(1)
+    # M.push(20)
+
+    print(M)
 
     print(M.pop())
     print(M.pop())
     print(M.pop())
 
     print(M)
-
