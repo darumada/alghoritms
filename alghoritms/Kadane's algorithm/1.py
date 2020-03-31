@@ -2,7 +2,7 @@ import math
 
 '''
 
-Kadane's alghoritm для поиска подмассива с максимальной суммой
+Kadane's algorithm для поиска подмассива с максимальной суммой
 
 @:param array: лист элементов
 
